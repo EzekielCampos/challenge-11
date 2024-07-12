@@ -8,6 +8,4 @@ router.use('/notes', notes);
 
 
 
-
-
 module.exports= router;

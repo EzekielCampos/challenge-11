@@ -11,6 +11,12 @@ router.route('/')
     res.json(info);
     
 })
+.post((req,res) =>{
+
+    const {id, title, text} = req.body;
+
+
+})
 
 
 
