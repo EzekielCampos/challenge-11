@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const {randomUUID} = require("../../helpers/random-id");
 const info = require("../../db/db.json");
+const {updateFile} = require("../../helpers/write-to-file");
 
 
 router.route('/')
@@ -20,9 +21,12 @@ router.route('/')
             id :randomUUID(),
         };
 
-        // info.push(addNote);
-        console.info(addNote);
+        info.push(addNote);
+        const updatedNote = JSON.stringify(info, null,2);
+        updateFile(updatedNote);
         
+
+        res.status(201).json(addNote);
     }
     else{
         res.status(500).json('Error in posting review');
