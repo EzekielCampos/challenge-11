@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const {randomUUID} = require("../../helpers/random-id");
+const {randomUUID} = require("../../public/helpers/random-id");
 const info = require("../../db/db.json");
-const {updateFile} = require("../../helpers/write-to-file");
+const {updateFile} = require("../../public/helpers/write-to-file");
 
 
 router.route('/')
