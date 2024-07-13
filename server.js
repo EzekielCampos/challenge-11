@@ -11,15 +11,16 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
+app.use('/api', api);
 app.get("/notes", (req, res)=>{
 
-
+console.info(res.status);
     res.sendFile(path.join(__dirname, "/public/notes.html"));
 
 
 });
 
-app.use('/api', api);
+
 
 
 app.listen(PORT, ()=>{
