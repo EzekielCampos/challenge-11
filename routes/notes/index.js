@@ -22,17 +22,31 @@ router.route('/')
         };
 
         notes.push(addNote);
-        const updatedNote = JSON.stringify(notes, null,2);
-        updateFile(updatedNote);
+        // const updatedNote = JSON.stringify(notes, null,2);
+        updateFile(notes);
         
         res.status(201).json(addNote);
     }
     else{
         res.status(500).json('Error in posting review');
     }
-
     res.json(`${req.method} request received`);
+})
 
+
+router.delete("/:id",(req, res) =>{
+
+    const itemDelete= req.params.id;
+
+    const notesModified = notes.filter(note => note.id !== itemDelete);
+
+    updateFile(notesModified);
+
+//    res.json(notesModified);
+
+
+
+    
 })
 
 
