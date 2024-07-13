@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const {randomUUID} = require("../../public/helpers/random-id");
-const info = require("../../db/db.json");
+const notes = require("../../db/db.json");
 const {updateFile} = require("../../public/helpers/write-to-file");
 
 
 router.route('/')
 .get((req, res)=>{
 
-    res.json(info);
+    res.json(notes);
     
 })
 .post((req,res) =>{
@@ -21,27 +21,19 @@ router.route('/')
             id :randomUUID(),
         };
 
-        info.push(addNote);
-        const updatedNote = JSON.stringify(info, null,2);
+        notes.push(addNote);
+        const updatedNote = JSON.stringify(notes, null,2);
         updateFile(updatedNote);
         
-
         res.status(201).json(addNote);
     }
     else{
         res.status(500).json('Error in posting review');
     }
-    console.info(info);
 
     res.json(`${req.method} request received`);
 
-
-
 })
-
-
-
-
 
 
 
