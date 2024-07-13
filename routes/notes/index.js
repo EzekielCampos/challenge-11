@@ -41,6 +41,7 @@ router.delete("/:id",(req, res) =>{
     const notesModified = notes.filter(note => note.id !== itemDelete);
 
     updateFile(notesModified);
+    res.status(200).json({ message: 'Note deleted successfully' });
 
 //    res.json(notesModified);
 
