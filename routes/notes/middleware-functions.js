@@ -21,9 +21,9 @@ const verifyBodyPost = (req, res, next)=>{
 
 const verifyDeleteId = (req, res, next) =>{
 
-if(req.param?.id && checkForValue(notes, req.param.id)) next();
+if(checkForValue(notes, req.param.id)) next();
 
-else return res.status(404).json('Invalid id entered');
+else return res.status(404).json({ message: 'Note cannot be found' });
 
 
 }
