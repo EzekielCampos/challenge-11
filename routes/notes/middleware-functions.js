@@ -23,9 +23,9 @@ const verifyDeleteId = (req, res, next) =>{
 
 if(req.param?.id && checkForValue(notes, req.param.id)) next();
 
-else return res.status(404).send({ error: 'Item not found' });
+else return res.status(404).json('Invalid id entered');
 
 
 }
 
-module.exports = {verifyBodyPost,}
+module.exports = {verifyBodyPost, verifyDeleteId}
