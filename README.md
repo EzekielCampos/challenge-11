@@ -31,6 +31,12 @@ To install this application, go to this GitHub repository copy the all the files
 ## Usage
 
 This application is used to create, save and delete notes on the website.  In order to start this application we must start the server inside the repo, before even running this make sure that if you have other servers running exit out of them. The command to run the server is “node server.js”.  Once the server is up and running a message will appear on the command line that will tell you where the port is listening.  If you go to the browser and enter “http://localhost:3001” then if there are no errors it will have taken you the main page.
+
+### Deployed Link
+https://note-taker-app-using-express-framework.onrender.com/
+
+### Screenshots
+![alt](./images/note-taker-screenshot.png)
 ## Contributing
 
 N/A
