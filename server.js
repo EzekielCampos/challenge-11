@@ -20,9 +20,13 @@ app.get("/notes", (req, res)=>{
     res.sendFile(path.join(__dirname, "/public/notes.html"));
 
 });
+// If a path is written that is not specified it will always return to the main page
+app.get('*', (req, res) =>{
+    res.sendFile(path.join(__dirname,"public/index.html"));
 
+})
 
-// This is the method that will be listening at the specified port for request
+// Fallback route for when a user attempts to visit routes that don't exist
 app.listen(PORT, ()=>{
 
     console.info(`App listening at http://localhost:${PORT}`);
