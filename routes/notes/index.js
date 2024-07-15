@@ -50,9 +50,6 @@ router.delete("/:id",verifyDeleteId,(req, res) =>{
     updateFile(notesModified);
     // Return a status code and message about succsesful removal of note
     res.status(200).json({ message: 'Note deleted successfully' });
-
-
-
     
 })
 

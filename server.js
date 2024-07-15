@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 // This function will create static routes for each file in the public folder
 app.use(express.static('public'));
-// This middleware takes us to our routes for one of the specific http request
+// This route will go to specific http method 
 app.use('/api', api);
 // If this route is hit it will send back and render the notes.html file
 app.get("/notes", (req, res)=>{
@@ -22,7 +22,7 @@ app.get("/notes", (req, res)=>{
 });
 // If a path is written that is not specified it will always return to the main page
 app.get('*', (req, res) =>{
-    res.sendFile(path.join(__dirname,"public/index.html"));
+    res.sendFile(path.join(__dirname, "public/index.html"));
 
 })
 
