@@ -36,6 +36,8 @@ This application is used to create, save and delete notes on the website.  In or
 https://note-taker-app-using-express-framework.onrender.com/
 
 ### Screenshots
+![alt](./images/main-page.png)
+
 ![alt](./images/note-taker-screenshot.png)
 ## Contributing
 
