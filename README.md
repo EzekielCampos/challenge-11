@@ -1,7 +1,9 @@
 
 # Creating Note Taker Application Using Express Framework
 
-[![License: MIT](https://cdn.prod.website-files.com/5e0f1144930a8bc8aace526c/65dd9eb5aaca434fac4f1c34_License-MIT-blue.svg)](/LICENSE)
+[![MIT License Badge](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](/LICENSE)
+![Express Badge](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
+![Node JS Badge](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
 
 ## Table of Contents
